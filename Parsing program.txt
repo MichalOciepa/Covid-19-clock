@@ -1,0 +1,95 @@
+const size_t capacity = JSON_ARRAY_SIZE(16) + 16*JSON_OBJECT_SIZE(3) + JSON_OBJECT_SIZE(6) + 1080;
+DynamicJsonDocument doc(capacity);
+
+const char* json = "{\"infected\":9593,\"deceased\":380,\"infectedByRegion\":[{\"region\":\"dolnoslaskie\",\"infectedCount\":1077,\"deceasedCount\":33},{\"region\":\"kujawsko-pomorskie\",\"infectedCount\":421,\"deceasedCount\":17},{\"region\":\"lubelskie\",\"infectedCount\":311,\"deceasedCount\":10},{\"region\":\"lubuskie\",\"infectedCount\":82,\"deceasedCount\":0},{\"region\":\"lodzkie\",\"infectedCount\":682,\"deceasedCount\":10},{\"region\":\"malopolskie\",\"infectedCount\":679,\"deceasedCount\":19},{\"region\":\"mazowieckie\",\"infectedCount\":2030,\"deceasedCount\":116},{\"region\":\"opolskie\",\"infectedCount\":292,\"deceasedCount\":14},{\"region\":\"podkarpackie\",\"infectedCount\":266,\"deceasedCount\":16},{\"region\":\"podlaskie\",\"infectedCount\":327,\"deceasedCount\":3},{\"region\":\"pomorskie\",\"infectedCount\":215,\"deceasedCount\":2},{\"region\":\"slaskie\",\"infectedCount\":1514,\"deceasedCount\":74},{\"region\":\"swietokrzyskie\",\"infectedCount\":227,\"deceasedCount\":4},{\"region\":\"warminsko-mazurskie\",\"infectedCount\":143,\"deceasedCount\":1},{\"region\":\"wielkopolskie\",\"infectedCount\":1050,\"deceasedCount\":57},{\"region\":\"zachodniopomorskie\",\"infectedCount\":277,\"deceasedCount\":4}],\"sourceUrl\":\"https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2\",\"lastUpdatedAtApify\":\"2020-04-21T05:10:00.000Z\",\"readMe\":\"https://apify.com/vaclavrut/covid-pl\"}";
+
+deserializeJson(doc, json);
+
+int infected = doc["infected"]; // 9593
+int deceased = doc["deceased"]; // 380
+
+JsonArray infectedByRegion = doc["infectedByRegion"];
+
+JsonObject infectedByRegion_0 = infectedByRegion[0];
+const char* infectedByRegion_0_region = infectedByRegion_0["region"]; // "dolnoslaskie"
+int infectedByRegion_0_infectedCount = infectedByRegion_0["infectedCount"]; // 1077
+int infectedByRegion_0_deceasedCount = infectedByRegion_0["deceasedCount"]; // 33
+
+JsonObject infectedByRegion_1 = infectedByRegion[1];
+const char* infectedByRegion_1_region = infectedByRegion_1["region"]; // "kujawsko-pomorskie"
+int infectedByRegion_1_infectedCount = infectedByRegion_1["infectedCount"]; // 421
+int infectedByRegion_1_deceasedCount = infectedByRegion_1["deceasedCount"]; // 17
+
+JsonObject infectedByRegion_2 = infectedByRegion[2];
+const char* infectedByRegion_2_region = infectedByRegion_2["region"]; // "lubelskie"
+int infectedByRegion_2_infectedCount = infectedByRegion_2["infectedCount"]; // 311
+int infectedByRegion_2_deceasedCount = infectedByRegion_2["deceasedCount"]; // 10
+
+JsonObject infectedByRegion_3 = infectedByRegion[3];
+const char* infectedByRegion_3_region = infectedByRegion_3["region"]; // "lubuskie"
+int infectedByRegion_3_infectedCount = infectedByRegion_3["infectedCount"]; // 82
+int infectedByRegion_3_deceasedCount = infectedByRegion_3["deceasedCount"]; // 0
+
+JsonObject infectedByRegion_4 = infectedByRegion[4];
+const char* infectedByRegion_4_region = infectedByRegion_4["region"]; // "lodzkie"
+int infectedByRegion_4_infectedCount = infectedByRegion_4["infectedCount"]; // 682
+int infectedByRegion_4_deceasedCount = infectedByRegion_4["deceasedCount"]; // 10
+
+JsonObject infectedByRegion_5 = infectedByRegion[5];
+const char* infectedByRegion_5_region = infectedByRegion_5["region"]; // "malopolskie"
+int infectedByRegion_5_infectedCount = infectedByRegion_5["infectedCount"]; // 679
+int infectedByRegion_5_deceasedCount = infectedByRegion_5["deceasedCount"]; // 19
+
+JsonObject infectedByRegion_6 = infectedByRegion[6];
+const char* infectedByRegion_6_region = infectedByRegion_6["region"]; // "mazowieckie"
+int infectedByRegion_6_infectedCount = infectedByRegion_6["infectedCount"]; // 2030
+int infectedByRegion_6_deceasedCount = infectedByRegion_6["deceasedCount"]; // 116
+
+JsonObject infectedByRegion_7 = infectedByRegion[7];
+const char* infectedByRegion_7_region = infectedByRegion_7["region"]; // "opolskie"
+int infectedByRegion_7_infectedCount = infectedByRegion_7["infectedCount"]; // 292
+int infectedByRegion_7_deceasedCount = infectedByRegion_7["deceasedCount"]; // 14
+
+JsonObject infectedByRegion_8 = infectedByRegion[8];
+const char* infectedByRegion_8_region = infectedByRegion_8["region"]; // "podkarpackie"
+int infectedByRegion_8_infectedCount = infectedByRegion_8["infectedCount"]; // 266
+int infectedByRegion_8_deceasedCount = infectedByRegion_8["deceasedCount"]; // 16
+
+JsonObject infectedByRegion_9 = infectedByRegion[9];
+const char* infectedByRegion_9_region = infectedByRegion_9["region"]; // "podlaskie"
+int infectedByRegion_9_infectedCount = infectedByRegion_9["infectedCount"]; // 327
+int infectedByRegion_9_deceasedCount = infectedByRegion_9["deceasedCount"]; // 3
+
+JsonObject infectedByRegion_10 = infectedByRegion[10];
+const char* infectedByRegion_10_region = infectedByRegion_10["region"]; // "pomorskie"
+int infectedByRegion_10_infectedCount = infectedByRegion_10["infectedCount"]; // 215
+int infectedByRegion_10_deceasedCount = infectedByRegion_10["deceasedCount"]; // 2
+
+JsonObject infectedByRegion_11 = infectedByRegion[11];
+const char* infectedByRegion_11_region = infectedByRegion_11["region"]; // "slaskie"
+int infectedByRegion_11_infectedCount = infectedByRegion_11["infectedCount"]; // 1514
+int infectedByRegion_11_deceasedCount = infectedByRegion_11["deceasedCount"]; // 74
+
+JsonObject infectedByRegion_12 = infectedByRegion[12];
+const char* infectedByRegion_12_region = infectedByRegion_12["region"]; // "swietokrzyskie"
+int infectedByRegion_12_infectedCount = infectedByRegion_12["infectedCount"]; // 227
+int infectedByRegion_12_deceasedCount = infectedByRegion_12["deceasedCount"]; // 4
+
+JsonObject infectedByRegion_13 = infectedByRegion[13];
+const char* infectedByRegion_13_region = infectedByRegion_13["region"]; // "warminsko-mazurskie"
+int infectedByRegion_13_infectedCount = infectedByRegion_13["infectedCount"]; // 143
+int infectedByRegion_13_deceasedCount = infectedByRegion_13["deceasedCount"]; // 1
+
+JsonObject infectedByRegion_14 = infectedByRegion[14];
+const char* infectedByRegion_14_region = infectedByRegion_14["region"]; // "wielkopolskie"
+int infectedByRegion_14_infectedCount = infectedByRegion_14["infectedCount"]; // 1050
+int infectedByRegion_14_deceasedCount = infectedByRegion_14["deceasedCount"]; // 57
+
+JsonObject infectedByRegion_15 = infectedByRegion[15];
+const char* infectedByRegion_15_region = infectedByRegion_15["region"]; // "zachodniopomorskie"
+int infectedByRegion_15_infectedCount = infectedByRegion_15["infectedCount"]; // 277
+int infectedByRegion_15_deceasedCount = infectedByRegion_15["deceasedCount"]; // 4
+
+const char* sourceUrl = doc["sourceUrl"]; // "https://www.gov.pl/web/koronawirus/wykaz-zarazen-koronawirusem-sars-cov-2"
+const char* lastUpdatedAtApify = doc["lastUpdatedAtApify"]; // "2020-04-21T05:10:00.000Z"
+const char* readMe = doc["readMe"]; // "https://apify.com/vaclavrut/covid-pl"
