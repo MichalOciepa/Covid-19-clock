@@ -7,3 +7,6 @@ I tried to regularly comment on my code. The buzzer was a problem for me. It was
 The watch fulfills its role, displays current data and informs about new diseases in my way (with delay function) :)
 
 Please comment if you have any tips.
+
+![Screenshot](screenshot.jpg)
+![Screenshot](screenshot2.jpg)
